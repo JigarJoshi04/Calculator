@@ -17,6 +17,13 @@ while True:
     print("Multiplication -->  2")
     print("Division       -->  3")
 
+
+    print("Subtraction    -->  4")
+
+    print("Modulo         -->  5")
+
+    print("Exit           -->  6")
+
     print("Power       -->  4")
  
 
@@ -24,6 +31,7 @@ while True:
 
     print("Modulo         -->  5")
     print("Exit           -->  6")
+
 
     choice = int(input("Choice please :-->  "))
 
@@ -38,6 +46,8 @@ while True:
 
     elif(choice == 4):
 
+
+
         result = Power.power(num1, num2)
 
     elif(choice == 5):
@@ -47,11 +57,21 @@ while True:
 
         result = IntegerDivision.integerdivision(num1,num2)
 
+
+        result = Subtraction.subtraction(num1,num2)   
+    
     elif(choice == 5):
         
 
         result = Modulo.mod(num1, num2)
+
+        
+
+
+
+        result = Modulo.mod(num1, num2)
         break 
+
 
     elif(choice == 6):
         break

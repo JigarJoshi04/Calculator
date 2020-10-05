@@ -10,7 +10,8 @@ while True:
     print("Addition       -->  1")
     print("Multiplication -->  2")
     print("Division       -->  3")
-    print("Exit           -->  4")
+    print("Subtraction    -->  4")
+    print("Exit           -->  5")
     choice = int(input("Choice please :-->  "))
 
     if(choice == 1):
@@ -24,6 +25,10 @@ while True:
 
     
     elif(choice == 4):
+        result = Subtraction.subtraction(num1,num2)   
+    
+    elif(choice == 5):
+        
         break
 
     else:

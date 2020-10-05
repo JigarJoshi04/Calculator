@@ -1,6 +1,6 @@
 from addition import Addition
 from multiplication import Multiplication
-
+from division import Division
 
 while True:
     print("Enter the number 01 :  ")
@@ -9,7 +9,8 @@ while True:
     num2 = int(input())
     print("Addition       -->  1")
     print("Multiplication -->  2")
-    print("Exit           -->  3")
+    print("Division       -->  3")
+    print("Exit           -->  4")
     choice = int(input("Choice please :-->  "))
 
     if(choice == 1):
@@ -19,6 +20,10 @@ while True:
         result = Multiplication.multiply(num1,num2)
     
     elif(choice == 3):
+        result = Division.division(num1,num2)
+
+    
+    elif(choice == 4):
         break
 
     else:

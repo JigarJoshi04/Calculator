@@ -1,6 +1,7 @@
 from addition import Addition
 from multiplication import Multiplication
 from division import Division
+from modulo import Modulo
 
 while True:
     print("Enter the number 01 :  ")
@@ -10,7 +11,8 @@ while True:
     print("Addition       -->  1")
     print("Multiplication -->  2")
     print("Division       -->  3")
-    print("Exit           -->  4")
+    print("Modulo         -->  4")
+    print("Exit           -->  5")
     choice = int(input("Choice please :-->  "))
 
     if(choice == 1):
@@ -22,10 +24,12 @@ while True:
     elif(choice == 3):
         result = Division.division(num1,num2)
 
-    
     elif(choice == 4):
-        break
+        result = Modulo.mod(num1, num2)
 
+    elif(choice == 5):
+        break
+    
     else:
         result = "Enter a valid input"
     

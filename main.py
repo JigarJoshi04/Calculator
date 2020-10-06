@@ -1,82 +1,59 @@
-from addition import Addition
-from multiplication import Multiplication
-from division import Division
-from power import Power
+"""
+Python Calculator App
+Github: https://github.com/JigarJoshi04/Calculator
+"""
 
-from integerdivision import IntegerDivision
-=======
-from modulo import Modulo
+from operations import (
+    addition,
+    subtraction,
+    multiplication,
+    division,
+    integer_division,
+    modulo,
+    power,
+    log,
+)
 
+RUNNING = True
 
-while True:
-    print("Enter the number 01 :  ")
-    num1 = int(input())
-    print("Enter the number 02 :  ")
-    num2 = int(input())
-    print("Addition       -->  1")
-    print("Multiplication -->  2")
-    print("Division       -->  3")
+while RUNNING:
+    print("-" * 50)
+    num1 = int(input("Enter First Integer  :--> "))
+    num2 = int(input("Enter Second Integer :--> "))
+    print(
+        """
+    Addition          -->  1     Subraction      -->  2
+    Multiplication    -->  3     Division        -->  4
+    Integer Division  -->  5     Power           -->  6
+    Modulo            -->  7     Log             -->  8
+    Exit              -->  9
+    """
+    )
 
+    operator = int(input("Please Enter Your Choice :--> "))
 
-    print("Subtraction    -->  4")
-
-    print("Modulo         -->  5")
-
-    print("Exit           -->  6")
-
-    print("Power       -->  4")
- 
-
-    print("Integer Division->  4")
-
-    print("Modulo         -->  5")
-    print("Exit           -->  6")
-
-
-    choice = int(input("Choice please :-->  "))
-
-    if(choice == 1):
-        result = Addition.add(num1, num2)
-
-    elif(choice == 2):
-        result = Multiplication.multiply(num1, num2)
-
-    elif(choice == 3):
-        result = Division.division(num1, num2)
-
-    elif(choice == 4):
-
-
-
-        result = Power.power(num1, num2)
-
-    elif(choice == 5):
+    if operator == 1:
+        result = addition(num1, num2)
+    elif operator == 2:
+        result = subtraction(num1, num2)
+    elif operator == 3:
+        result = multiplication(num1, num2)
+    elif operator == 4:
+        result = division(num1, num2)
+    elif operator == 5:
+        result = integer_division(num1, num2)
+    elif operator == 6:
+        result = power(num1, num2)
+    elif operator == 7:
+        result = modulo(num1, num2)
+    elif operator == 8:
+        result = log(num1, num2)
+    elif operator == 9:
         break
-
-
-
-        result = IntegerDivision.integerdivision(num1,num2)
-
-
-        result = Subtraction.subtraction(num1,num2)   
-    
-    elif(choice == 5):
-        
-
-        result = Modulo.mod(num1, num2)
-
-        
-
-
-
-        result = Modulo.mod(num1, num2)
-        break 
-
-
-    elif(choice == 6):
-        break
-    
     else:
-        result = "Enter a valid input"
+        result = "Enter a valid input. Try again!"
 
-    print(result)
+    print(f"\nThe output of the selected operation is {result}")
+
+    choice = input("\nDo you wish to continue? (y/n) :--> ").lower()
+    RUNNING = True if choice == 'y' else False

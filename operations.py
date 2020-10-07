@@ -1,7 +1,7 @@
 """ Util Functions """
 import math
 import numpy as np
-
+import random
 
 def addition(first: int, second: int) -> int:
     """
@@ -106,3 +106,12 @@ def sigmoid(z):
     ### END CODE HERE ###
     
     return s
+
+def rand_between(start: int, stop: int) -> int:
+    """
+    Returns a random number between two integers.
+    Parameters:
+        start (int) : Lower limit of Random Number
+        stop (int) : Upper Limit of Random Number
+    """
+    return random.randint(start, stop)

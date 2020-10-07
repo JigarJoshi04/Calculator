@@ -12,6 +12,7 @@ from operations import (
     modulo,
     power,
     log,
+    sigmoid
 )
 
 RUNNING = True
@@ -26,7 +27,7 @@ while RUNNING:
     Multiplication    -->  3     Division        -->  4
     Integer Division  -->  5     Power           -->  6
     Modulo            -->  7     Log             -->  8
-    Exit              -->  9
+    Sigmoid of sum    -->  9     Exit            -->  10
     """
     )
 
@@ -49,6 +50,8 @@ while RUNNING:
     elif operator == 8:
         result = log(num1, num2)
     elif operator == 9:
+        result = sigmoid(num1 + num2)
+    elif operator == 10:
         break
     else:
         result = "Enter a valid input. Try again!"

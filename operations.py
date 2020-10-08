@@ -115,3 +115,65 @@ def rand_between(start: int, stop: int) -> int:
         stop (int) : Upper Limit of Random Number
     """
     return random.randint(start, stop)
+
+def mean(numbers: list) -> float:
+    """
+    Returns an float of the mean of numbers provided in mean 64 for more accuracy.
+    Parameters:
+        numbers (list) : A list of numbers
+    """
+    return np.mean(np.array(numbers), dtype=np.float64)
+
+def range(first: int, second: int) -> float:
+    """
+    Returns the range between 2 numbers.
+    Parameters:
+        start (int) : First number
+        end (int) : Second number
+    """
+	
+    biggest = 0
+    smallest = 0
+    
+    if (first < second):
+        biggest = second
+        return biggest - first
+    
+    return first - second
+
+def median(numbers: list) -> float:
+    """
+    Returns the median of a list of numbers.
+    Parameters:
+         numbers (list) : A list of numbers
+    """
+	list_size = len(numbers)
+	numbers.sort()
+	
+	if list_size % 2 == 0: 
+		median1 = numbers[list_size//2] 
+		median2 = numbers[list_size//2 - 1] 
+		median = (median1 + median2)/2
+	else: 
+		median = numbers[list_size//2]
+
+	return median
+
+def mode(numbers: list) -> dict:
+    """
+    Returns the mode of a list of numbers as a dictionary.
+    Parameters:
+         numbers (list) : A list of numbers
+    """
+    numbers.sort()
+    ordered_list = []
+
+    i = 0
+    while i < len(numbers):
+        ordered_list.append(numbers.count(numbers[i]))
+        i += 1
+
+    count_num_dict = dict(zip(numbers, ordered_list))
+    filter_dict = {k for (k, v) in count_num_dict.items() if v == max(ordered_list)}
+
+    return int(str(filter_dict).replace("{","").replace("}",""))

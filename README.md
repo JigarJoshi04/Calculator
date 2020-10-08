@@ -1,4 +1,4 @@
-# Calculator
+# Calculator    :iphone:
 
 ### Tech Stack used 
 - Python
@@ -35,4 +35,4 @@
 - Trignometric Functions like sinx,cosx,....
 - Statistic Functions like Mean, Mode, Median,...
 
-## :triangular_flag_on_post: Contrubutions are always welcomed !! 
+## :triangular_flag_on_post: Contributions are always welcomed !! 

@@ -13,7 +13,8 @@ from operations import (
     power,
     log,
     sigmoid,
-    rand_between
+    rand_between,
+    hcf
 )
 
 RUNNING = True
@@ -24,12 +25,12 @@ while RUNNING:
     num2 = int(input("Enter Second Integer :--> "))
     print(
         """
-    Addition          -->  1     Subraction      -->  2
-    Multiplication    -->  3     Division        -->  4
-    Integer Division  -->  5     Power           -->  6
-    Modulo            -->  7     Log             -->  8
-    Sigmoid of sum    -->  9     Random Number   -->  10 
-    Exit            -->  11
+    Addition              -->  1     Subraction      -->  2
+    Multiplication        -->  3     Division        -->  4
+    Integer Division      -->  5     Power           -->  6
+    Modulo                -->  7     Log             -->  8
+    Sigmoid of sum        -->  9     Random Number   -->  10
+    Highest common factor --> 11     Exit            -->  12
     """
     )
 
@@ -54,8 +55,10 @@ while RUNNING:
     elif operator == 9:
         result = sigmoid(num1 + num2)
     elif operator == 10:
-        result = rand_between(num1,num2)
+        result = rand_between(num1, num2)
     elif operator == 11:
+        result = hcf(num1, num2)
+    elif operator == 12:
         break
     else:
         result = "Enter a valid input. Try again!"

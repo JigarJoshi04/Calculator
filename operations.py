@@ -3,6 +3,7 @@ import math
 import numpy as np
 import random
 
+
 def addition(first: int, second: int) -> int:
     """
     Returns sum of two integers.
@@ -90,6 +91,7 @@ def log(first: int, base: int) -> float:
     """
     return math.log(first, base)
 
+
 def sigmoid(z):
     """
     Compute the sigmoid of z
@@ -101,11 +103,12 @@ def sigmoid(z):
     s -- sigmoid(z)
     """
 
-    ### START CODE HERE ### (≈ 1 line of code)
+    # START CODE HERE ### (≈ 1 line of code)
     s = 1 / (1 + np.exp(-z))
     ### END CODE HERE ###
-    
+
     return s
+
 
 def rand_between(start: int, stop: int) -> int:
     """
@@ -116,6 +119,7 @@ def rand_between(start: int, stop: int) -> int:
     """
     return random.randint(start, stop)
 
+
 def mean(numbers: list) -> float:
     """
     Returns an float of the mean of numbers provided in mean 64 for more accuracy.
@@ -124,6 +128,7 @@ def mean(numbers: list) -> float:
     """
     return np.mean(np.array(numbers), dtype=np.float64)
 
+
 def range(first: int, second: int) -> float:
     """
     Returns the range between 2 numbers.
@@ -131,15 +136,15 @@ def range(first: int, second: int) -> float:
         start (int) : First number
         end (int) : Second number
     """
-	
+
     biggest = 0
-    smallest = 0
-    
+
     if (first < second):
         biggest = second
         return biggest - first
-    
+
     return first - second
+
 
 def median(numbers: list) -> float:
     """
@@ -147,17 +152,18 @@ def median(numbers: list) -> float:
     Parameters:
          numbers (list) : A list of numbers
     """
-	list_size = len(numbers)
-	numbers.sort()
-	
-	if list_size % 2 == 0: 
-		median1 = numbers[list_size//2] 
-		median2 = numbers[list_size//2 - 1] 
-		median = (median1 + median2)/2
-	else: 
-		median = numbers[list_size//2]
+    list_size = len(numbers)
+    numbers.sort()
 
-	return median
+    if list_size % 2 == 0:
+        median1 = numbers[list_size//2]
+        median2 = numbers[list_size//2 - 1]
+        median = (median1 + median2)/2
+    else:
+        median = numbers[list_size//2]
+
+    return median
+
 
 def mode(numbers: list) -> dict:
     """
@@ -174,6 +180,13 @@ def mode(numbers: list) -> dict:
         i += 1
 
     count_num_dict = dict(zip(numbers, ordered_list))
-    filter_dict = {k for (k, v) in count_num_dict.items() if v == max(ordered_list)}
+    filter_dict = {k for (k, v) in count_num_dict.items()
+                   if v == max(ordered_list)}
 
-    return int(str(filter_dict).replace("{","").replace("}",""))
+    return int(str(filter_dict).replace("{", "").replace("}", ""))
+
+
+def hcf(x, y):
+    while(y):
+        x, y = y, x % y
+    return x

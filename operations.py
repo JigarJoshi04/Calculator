@@ -190,3 +190,9 @@ def hcf(x, y):
     while(y):
         x, y = y, x % y
     return x
+
+def factorial(num: int) -> int:
+    if num <= 1:
+        return 1
+    else:
+        return factorial(num-1) * num

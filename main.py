@@ -14,7 +14,8 @@ from operations import (
     log,
     sigmoid,
     rand_between,
-    hcf
+    hcf,
+    factorial
 )
 
 RUNNING = True
@@ -30,7 +31,8 @@ while RUNNING:
     Integer Division      -->  5     Power           -->  6
     Modulo                -->  7     Log             -->  8
     Sigmoid of sum        -->  9     Random Number   -->  10
-    Highest common factor --> 11     Exit            -->  12
+    Highest common factor --> 11     Factorial (of first number) --> 12
+    Exit            -->  13
     """
     )
 
@@ -58,7 +60,9 @@ while RUNNING:
         result = rand_between(num1, num2)
     elif operator == 11:
         result = hcf(num1, num2)
-    elif operator == 12:
+    elif operator ==12:
+        result = factorial(num1)
+    elif operator == 13:
         break
     else:
         result = "Enter a valid input. Try again!"

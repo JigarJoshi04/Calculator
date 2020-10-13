@@ -214,3 +214,13 @@ def factorial(num: int) -> int:
         return 1
     else:
         return factorial(num-1) * num
+
+def exponential(Num) -> int:
+    """
+    This is to calculate exponential of number
+    Parameters:
+        Num (int): Number to calculate exponential of
+    Returns:
+        exponential value of number
+    """
+    return math.exp(Num)

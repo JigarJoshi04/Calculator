@@ -15,7 +15,8 @@ from operations import (
     sigmoid,
     rand_between,
     hcf,
-    factorial
+    factorial,
+    exponential
 )
 
 RUNNING = True
@@ -32,7 +33,8 @@ while RUNNING:
     Modulo                -->  7     Log             -->  8
     Sigmoid of sum        -->  9     Random Number   -->  10
     Highest common factor --> 11     Factorial (of first number) --> 12
-    Exit            -->  13
+    Exponential of number --> 13
+    Exit            -->  14
     """
     )
 
@@ -63,6 +65,8 @@ while RUNNING:
     elif operator ==12:
         result = factorial(num1)
     elif operator == 13:
+        result = exponential(num1)
+    elif operator == 14:
         break
     else:
         result = "Enter a valid input. Try again!"

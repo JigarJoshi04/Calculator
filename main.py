@@ -16,7 +16,10 @@ from operations import (
     rand_between,
     hcf,
     factorial,
-    exponential
+    exponential,
+    Sine,
+    Cosine,
+    Tangent
 )
 
 RUNNING = True
@@ -33,8 +36,10 @@ while RUNNING:
     Modulo                -->  7     Log             -->  8
     Sigmoid of sum        -->  9     Random Number   -->  10
     Highest common factor --> 11     Factorial (of first number) --> 12
-    Exponential of number --> 13
-    Exit            -->  14
+    Exponential of number --> 13     Sine (sinx)    --> 14
+    Exit                  --> 17     Cosine(cosx)   --> 15 
+                                     Tangent(tanx)  --> 16
+   
     """
     )
 
@@ -67,6 +72,12 @@ while RUNNING:
     elif operator == 13:
         result = exponential(num1)
     elif operator == 14:
+        result = Sine()
+    elif operator == 15:
+        result = Cosine()
+    elif operator == 16:
+        result = Tangent()
+    elif operator == 17:
         break
     else:
         result = "Enter a valid input. Try again!"

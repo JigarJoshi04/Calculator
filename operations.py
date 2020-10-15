@@ -190,23 +190,24 @@ def hcf(x, y):
     while(y):
         x, y = y, x % y
         
-        from scipy.integrate import odeint
+
+from scipy.integrate import odeint
 import numpy as N
 
 def f(y, t):
     """this is the rhs of the ODE to integrate, i.e. dy/dt=f(y,t)"""
     return -2 * y * t
 
-y0 = 1            
-a = 0             
-b = 2
+    y0 = 1            
+    a = 0             
+    b = 2
 
-t = N.arange(a, b, 0.01)  
-y = odeint(f, y0, t)  
+    t = N.arange(a, b, 0.01)  
+    y = odeint(f, y0, t)  
 
-import pylab          
-pylab.plot(t, y)
-pylab.xlabel('t'); pylab.ylabel('y(t)')
+    import pylab          
+    pylab.plot(t, y)
+    pylab.xlabel('t'); pylab.ylabel('y(t)')
     return x
 
 def factorial(num: int) -> int:
@@ -224,3 +225,25 @@ def exponential(Num) -> int:
         exponential value of number
     """
     return math.exp(Num)
+
+
+"""
+Some Basic Trognometric Functions.
+"""
+def Sine():
+    x = input("You chose Sin(x) \nEnter the Number(x) in Degrees:")
+    x = int(x)
+    res= math.sin(math.radians(x))
+    return res
+
+def Cosine():
+    x = input("You chose Cos(x) \nEnter the Number(x) in Degrees:")
+    x = int(x)
+    res= math.cos(math.radians(x))
+    return res
+
+def Tangent():
+    x = input("You chose Tan(x) \nEnter the Number(x) in Degrees:")
+    x = int(x)
+    res= math.tan(math.radians(x))
+    return res

@@ -14,6 +14,9 @@
 - Logarithm
 - Sigmoid
 - Random Number 
+- Factorial
+- Exponential
+- Basic Trignometric Functions
 
 
 ### Info of files 
@@ -28,11 +31,9 @@
 - Import the newly defined function in `main.py` and implement it under elif condition. 
 
 #### Functionalities that you can add:
-- Exponential
-- Factorial 
 - Differentiation
 - Integration
-- Trignometric Functions like sinx,cosx,....
+- Complex Trignometric Operations.
 - Statistic Functions like Mean, Mode, Median,...
 
 ## :triangular_flag_on_post: Contributions are always welcomed !! 
